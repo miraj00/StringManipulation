@@ -4,7 +4,7 @@ public class StringManipulation {
 	//1    takes a word and prints it out with the first letter capitalized and all other letters lowercase.
 	public static void capitalize(String word) {
 		
-		System.out.println(word.toUpperCase());		
+		System.out.println(word.toUpperCase().charAt(0) + word.substring(1).toLowerCase());		
 	}
 	
 	
@@ -18,8 +18,12 @@ public class StringManipulation {
 	//3    takes two strings, prints the string that comes first alphabetically, then prints the other.
 	public static void firstThingsFirst(String a, String b) {
 		
-		System.out.println(a + " " + b);
-		System.out.println(a.concat(" ").concat(b));
+		if (a.toLowerCase().charAt(0) < b.toLowerCase().charAt(0)){
+			
+			System.out.println(a.concat(" " + b));
+		} else {
+			System.out.println(b.concat(" " + a));
+		}		
 	}	
 	
 	
